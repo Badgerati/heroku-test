@@ -26,6 +26,7 @@ try {
     /////////////////////////////////////
     // setup view engine
     /////////////////////////////////////
+    app.set('views', './src/views');
     app.set('view engine', 'pug');
 
 
