@@ -32,14 +32,16 @@ try {
     /////////////////////////////////////
     // setup page + action routes
     /////////////////////////////////////
-    app.use('/', require('./routes/pages.js'));
+    app.get('/', function(req, res) {
+        res.render('index');
+    });
 
 
     /////////////////////////////////////
     // hook node onto ip:port
     /////////////////////////////////////    
-    http.createServer(app).listen(8080, function() {
-        console.log('Running on http://localhost:8080');
+    http.createServer(app).listen(8084, function() {
+        console.log('Running on http://localhost:8084');
     });
 }
 catch (err) {
