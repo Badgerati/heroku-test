@@ -40,8 +40,9 @@ try {
     /////////////////////////////////////
     // hook node onto ip:port
     /////////////////////////////////////    
-    http.createServer(app).listen(8084, function() {
-        console.log('Running on http://localhost:8084');
+    var port = process.env.PORT || 8084;
+    http.createServer(app).listen(port, function() {
+        console.log('Running on http://localhost:' + port);
     });
 }
 catch (err) {
